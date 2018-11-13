@@ -12,7 +12,6 @@ namespace CodeSnippetNet
     {
         static void Main(string[] args)
         {
-            CallContext
         }
     }
 }
