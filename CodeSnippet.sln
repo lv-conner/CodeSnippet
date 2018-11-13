@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeSnippet", "CodeSnippet\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeSnippetNet", "CodeSnippetNet\CodeSnippetNet.csproj", "{ECB8F1BB-C017-42E4-A755-7FEF3006D611}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeSnippet.Test", "CodeSnippet.Test\CodeSnippet.Test.csproj", "{E559A829-35E3-4D49-A75A-6D20B7ECB318}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{ECB8F1BB-C017-42E4-A755-7FEF3006D611}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ECB8F1BB-C017-42E4-A755-7FEF3006D611}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ECB8F1BB-C017-42E4-A755-7FEF3006D611}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E559A829-35E3-4D49-A75A-6D20B7ECB318}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E559A829-35E3-4D49-A75A-6D20B7ECB318}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E559A829-35E3-4D49-A75A-6D20B7ECB318}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E559A829-35E3-4D49-A75A-6D20B7ECB318}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

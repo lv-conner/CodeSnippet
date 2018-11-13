@@ -11,7 +11,8 @@ namespace CodeSnippet
         static void Main(string[] args)
         {
             //TranslocationOperate();
-            MemoryStreamCase();
+            //MemoryStreamCase();
+            var k = false ^ false;
             Console.WriteLine("Hello World!");
         }
         /// <summary>
