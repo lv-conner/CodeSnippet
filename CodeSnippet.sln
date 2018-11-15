@@ -11,12 +11,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodeSnippet.Test", "CodeSni
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebCodeSnipper", "WebCodeSnipper\WebCodeSnipper.csproj", "{CC53E099-8094-47F1-A444-C7486C6AC5AF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Swashbuckle.AspNetCore.Swagger", "..\..\..\GirRepo\Swashbuckle.AspNetCore\src\Swashbuckle.AspNetCore.Swagger\Swashbuckle.AspNetCore.Swagger.csproj", "{9F283107-3C6C-465D-B1AB-C24ACB5298D5}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Swashbuckle.AspNetCore.SwaggerGen", "..\..\..\GirRepo\Swashbuckle.AspNetCore\src\Swashbuckle.AspNetCore.SwaggerGen\Swashbuckle.AspNetCore.SwaggerGen.csproj", "{C4EA820C-71CA-4F02-B977-4257E6252141}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Swashbuckle.AspNetCore.SwaggerUI", "..\..\..\GirRepo\Swashbuckle.AspNetCore\src\Swashbuckle.AspNetCore.SwaggerUI\Swashbuckle.AspNetCore.SwaggerUI.csproj", "{20C096BC-1631-4387-97A4-002E3FC4BA51}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,18 +33,6 @@ Global
 		{CC53E099-8094-47F1-A444-C7486C6AC5AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CC53E099-8094-47F1-A444-C7486C6AC5AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CC53E099-8094-47F1-A444-C7486C6AC5AF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9F283107-3C6C-465D-B1AB-C24ACB5298D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9F283107-3C6C-465D-B1AB-C24ACB5298D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9F283107-3C6C-465D-B1AB-C24ACB5298D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9F283107-3C6C-465D-B1AB-C24ACB5298D5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C4EA820C-71CA-4F02-B977-4257E6252141}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C4EA820C-71CA-4F02-B977-4257E6252141}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C4EA820C-71CA-4F02-B977-4257E6252141}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C4EA820C-71CA-4F02-B977-4257E6252141}.Release|Any CPU.Build.0 = Release|Any CPU
-		{20C096BC-1631-4387-97A4-002E3FC4BA51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{20C096BC-1631-4387-97A4-002E3FC4BA51}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{20C096BC-1631-4387-97A4-002E3FC4BA51}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{20C096BC-1631-4387-97A4-002E3FC4BA51}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
