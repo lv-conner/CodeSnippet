@@ -3,11 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2050
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeSnippet", "CodeSnippet\CodeSnippet.csproj", "{5C38AFDA-ECB2-47D8-89DC-3B7DDEEF722C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodeSnippet", "CodeSnippet\CodeSnippet.csproj", "{5C38AFDA-ECB2-47D8-89DC-3B7DDEEF722C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeSnippetNet", "CodeSnippetNet\CodeSnippetNet.csproj", "{ECB8F1BB-C017-42E4-A755-7FEF3006D611}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeSnippet.Test", "CodeSnippet.Test\CodeSnippet.Test.csproj", "{E559A829-35E3-4D49-A75A-6D20B7ECB318}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodeSnippet.Test", "CodeSnippet.Test\CodeSnippet.Test.csproj", "{E559A829-35E3-4D49-A75A-6D20B7ECB318}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebCodeSnipper", "WebCodeSnipper\WebCodeSnipper.csproj", "{CC53E099-8094-47F1-A444-C7486C6AC5AF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Swashbuckle.AspNetCore.Swagger", "..\..\..\GirRepo\Swashbuckle.AspNetCore\src\Swashbuckle.AspNetCore.Swagger\Swashbuckle.AspNetCore.Swagger.csproj", "{9F283107-3C6C-465D-B1AB-C24ACB5298D5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Swashbuckle.AspNetCore.SwaggerGen", "..\..\..\GirRepo\Swashbuckle.AspNetCore\src\Swashbuckle.AspNetCore.SwaggerGen\Swashbuckle.AspNetCore.SwaggerGen.csproj", "{C4EA820C-71CA-4F02-B977-4257E6252141}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Swashbuckle.AspNetCore.SwaggerUI", "..\..\..\GirRepo\Swashbuckle.AspNetCore\src\Swashbuckle.AspNetCore.SwaggerUI\Swashbuckle.AspNetCore.SwaggerUI.csproj", "{20C096BC-1631-4387-97A4-002E3FC4BA51}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +35,22 @@ Global
 		{E559A829-35E3-4D49-A75A-6D20B7ECB318}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E559A829-35E3-4D49-A75A-6D20B7ECB318}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E559A829-35E3-4D49-A75A-6D20B7ECB318}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC53E099-8094-47F1-A444-C7486C6AC5AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC53E099-8094-47F1-A444-C7486C6AC5AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC53E099-8094-47F1-A444-C7486C6AC5AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC53E099-8094-47F1-A444-C7486C6AC5AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F283107-3C6C-465D-B1AB-C24ACB5298D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F283107-3C6C-465D-B1AB-C24ACB5298D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F283107-3C6C-465D-B1AB-C24ACB5298D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F283107-3C6C-465D-B1AB-C24ACB5298D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4EA820C-71CA-4F02-B977-4257E6252141}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4EA820C-71CA-4F02-B977-4257E6252141}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4EA820C-71CA-4F02-B977-4257E6252141}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4EA820C-71CA-4F02-B977-4257E6252141}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20C096BC-1631-4387-97A4-002E3FC4BA51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20C096BC-1631-4387-97A4-002E3FC4BA51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20C096BC-1631-4387-97A4-002E3FC4BA51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20C096BC-1631-4387-97A4-002E3FC4BA51}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
