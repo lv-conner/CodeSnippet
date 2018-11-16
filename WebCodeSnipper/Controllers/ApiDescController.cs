@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ApiExplorer;
+using Microsoft.AspNetCore.Mvc.Infrastructure;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -14,17 +15,24 @@ namespace WebCodeSnipper.Controllers
     {
         private readonly IApiDescriptionGroupCollectionProvider _apiDescriptionGroupCollectionProvider;
         private readonly IApiDescriptionProvider _apiDescriptionProvider;
-        public ApiDescController(IApiDescriptionGroupCollectionProvider apiDescriptionGroupCollectionProvider,IApiDescriptionProvider apiDescriptionProvider)
+        private readonly IActionDescriptorCollectionProvider _actionDescriptorCollectionProvider;
+        public ApiDescController(
+            IApiDescriptionGroupCollectionProvider apiDescriptionGroupCollectionProvider
+            ,IApiDescriptionProvider apiDescriptionProvider
+            ,IActionDescriptorCollectionProvider actionDescriptorCollectionProvider
+            )
         {
             _apiDescriptionGroupCollectionProvider = apiDescriptionGroupCollectionProvider;
             _apiDescriptionProvider = apiDescriptionProvider;
+            _actionDescriptorCollectionProvider = actionDescriptorCollectionProvider;
         }
         // GET: api/<controller>
         [HttpGet]
-        public IEnumerable<ApiDescription> Get()
+        public IActionResult Get()
         {
             var apis =  _apiDescriptionGroupCollectionProvider.ApiDescriptionGroups.Items.SelectMany(p => p.Items);
-            return apis;
+            var actions = _actionDescriptorCollectionProvider.ActionDescriptors;
+            return Ok();
             //return new string[] { "value1", "value2" };
         }
 
