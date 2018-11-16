@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Formatters;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -27,7 +28,10 @@ namespace WebCodeSnipper
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1).AddJsonOptions(options =>
+            {
+                options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
+            });
             //获取编译器生成的xml文档路径
             var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
             var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
@@ -43,6 +47,12 @@ namespace WebCodeSnipper
                 });
                 config.IncludeXmlComments(xmlPath);//将文档添加到Swagger，Swagger根据xml文档生成APi文档
             });
+
+
+            var mappings = services.BuildServiceProvider().GetService<IOptions<MvcOptions>>().Value;
+            
+            var formatterFilter = services.BuildServiceProvider().GetService<FormatFilter>();
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
