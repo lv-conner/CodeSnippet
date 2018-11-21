@@ -51,4 +51,28 @@ namespace CodeSnippet.DesignPattern
 
         }
     }
+
+    public class SingletonCase
+    {
+        private SingletonCase()
+        {
+
+        }
+
+        private static SingletonCase _singletonCase;
+        public static SingletonCase Singleton
+        {
+            get
+            {
+                if(_singletonCase != null)
+                {
+                    return _singletonCase;
+                }
+                var temp = new SingletonCase();
+                Interlocked.CompareExchange(ref _singletonCase, temp, null);//可能创建多个实例，但是最终只有一个实例被设置到引用中；
+                //优点：没有锁，但是速度非常快。而且不会阻塞线程。
+                return _singletonCase;
+            }
+        }
+    }
 }
