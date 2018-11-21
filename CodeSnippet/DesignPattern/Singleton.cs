@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading;
 
 namespace CodeSnippet.DesignPattern
 {
@@ -33,7 +34,8 @@ namespace CodeSnippet.DesignPattern
                 {
                     if(_anotherInstanse == null)
                     {
-                        _anotherInstanse = new Singleton();
+                        var temp = new Singleton();
+                        Volatile.Write(ref _anotherInstanse, temp);//避免在构造器尚未调用完成而有其他线程访问该单例
                     }
                     return _anotherInstanse;
                 }
