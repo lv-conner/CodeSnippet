@@ -14,6 +14,28 @@ namespace CodeSnippet
         {
             //TranslocationOperate();
             //MemoryStreamCase();
+
+            Task.Run(() =>
+            {
+                LockPersonType();
+            });
+            Thread.Sleep(100);
+            var p = new Person();
+            var ptype = typeof(Person);
+
+
+            Console.ReadKey();
+            //old();
+        }
+        public static void LockPersonType()
+        {
+            Monitor.Enter(typeof(Person));
+            Thread.Sleep(10000);
+            Monitor.Exit(typeof(Person));
+        }
+
+        private static void old()
+        {
             ManualResetEventSlim manualResetEventSlim = new ManualResetEventSlim();
             Task.Delay(2000).ContinueWith(t =>
             {
@@ -24,7 +46,7 @@ namespace CodeSnippet
             var v = Interlocked.CompareExchange(ref a1, 1, 5);
             MutexLock mutexLock = new MutexLock();
             mutexLock.Method1();
-            
+
             Semaphore semaphore = new Semaphore(1, 2);
             AutoResetEvent autoResetEvent = new AutoResetEvent(false);
             Mutex mutex = new Mutex();
