@@ -6,7 +6,7 @@ namespace CodeSnippet
 {
     internal sealed class ReadWriteLockCase
     {
-        static ReaderWriterLockSlim _readerWriterLockSlim = new ReaderWriterLockSlim();
+        static ReaderWriterLockSlim _readerWriterLockSlim = new ReaderWriterLockSlim(LockRecursionPolicy.NoRecursion);//禁用线程递归和所有权，可提高性能
         static string Name = "tim lv";
         static string Read()
         {
