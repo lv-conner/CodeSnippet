@@ -14,7 +14,19 @@ namespace CodeSnippet
         {
             //TranslocationOperate();
             //MemoryStreamCase();
-
+            StackTraceCase();
+            ExceptionCase();
+            var timer = new Timer(obj =>
+            {
+                Console.WriteLine("Hello" + DateTime.Now.ToLongDateString());
+                GC.Collect();
+            }, null, 0, 2000);
+            
+            Console.ReadKey();
+            string a = "123";
+            string b = "123";
+            Console.WriteLine(a == b);
+            Console.WriteLine(Object.ReferenceEquals(a, b));
             Task.Run(() =>
             {
                 LockPersonType();
@@ -26,6 +38,39 @@ namespace CodeSnippet
 
             Console.ReadKey();
             //old();
+        }
+        static void ExceptionCase()
+        {
+            try
+            {
+                try
+                {
+                    throw new NotImplementedException();
+                }
+                catch(InvalidOperationException e)
+                {
+                    
+                }
+                finally
+                {
+                    Console.WriteLine("exit NotImplementedException");
+                }
+            }
+            catch(NotImplementedException ex)
+            {
+                Console.WriteLine("Catch notimplementException");
+                //throw;
+            }
+            finally
+            {
+                Console.WriteLine("Exception end");
+            }
+        }
+
+        static void StackTraceCase()
+        {
+            StackTrace stackTrace = new StackTrace(true);
+            var frame = stackTrace.GetFrame(1);
         }
         public static void LockPersonType()
         {
